@@ -21,9 +21,13 @@ public class AlarmFlagManager {
    * 알람 객체의 ID로 변환한 ID를 반환한다.
    *
    * 이때 `Timer`의 경우는 ID가 0이므로 반환값도 0이 되어 문제가 없다.
+   *
+   * set id alarm and for read it in flutter after background service triggered.!
    */
   static private long getActualIdFrom(long callbackId) {
-    return (long) Math.floor(callbackId / 7.0);
+    Log.i("AlarmFlagManagerJava[ID]:", String.valueOf(callbackId));
+    // return (long) Math.floor(callbackId / 7.0);
+    return (long) callbackId;
   }
 
 }
